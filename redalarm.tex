@@ -1,0 +1,43 @@
+\documentclass[12pt]{ctexart}
+
+\usepackage{xltxtra}
+
+\CTEXsetup[format={\Large\bfseries}]{section}
+
+\pagestyle{plain}
+
+\title{红警指南}
+\author{yld}
+\date{}
+
+\begin{document}
+	\maketitle
+	\pagenumbering{gobble}
+	\newpage
+	\pagenumbering{arabic}
+	
+	\section{建造价格}
+		
+	\newpage
+	
+	\section{建造依赖关系}
+		\subsection{建造建筑依赖}
+			依赖指能够建造建筑的前置条件，而不是建筑的运行条件。下文中$x \rightarrow y$表示$y$依赖于$x$
+			
+			兵营$\rightarrow$战车工厂，雷达，维修厂
+			
+			战车工厂$+$雷达$\rightarrow$实验室
+			
+			实验室$\rightarrow$核电站，复制中心（苏）精炼厂（盟）
+		\subsection{兵种和防御依赖}
+		\subsubsection{基础（兵营）}
+		\subsubsection{中级（雷达$+$战车工厂）}
+		\subsubsection{高级（作战实验室）}
+	\newpage
+	
+	\section{战术}
+		\subsection{发展}
+		\subsection{攻击}
+		\subsection{防御}
+
+\end{document}
