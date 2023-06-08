@@ -1,10 +1,13 @@
 \documentclass[12pt]{ctexart}
 
 \usepackage{xltxtra}
+\usepackage{amsmath}
+\usepackage{booktabs}
 
 \CTEXsetup[format={\Large\bfseries}]{section}
 
 \pagestyle{plain}
+\setcounter{tocdepth}{3}
 
 \title{红警指南}
 \author{yld}
@@ -15,6 +18,8 @@
 	\pagenumbering{gobble}
 	\newpage
 	\pagenumbering{arabic}
+	\tableofcontents
+	\newpage
 	
 	\section{建造价格}
 		
@@ -23,16 +28,37 @@
 	\section{建造依赖关系}
 		\subsection{建造建筑依赖}
 			依赖指能够建造建筑的前置条件，而不是建筑的运行条件。下文中$x \rightarrow y$表示$y$依赖于$x$
+			\begin{align*}
+				\text{兵营} &\rightarrow \text{战车工厂，雷达，维修厂}\\
+				\text{战车工厂 + 雷达} &\rightarrow \text{实验室}\\
+				\text{实验室} &\rightarrow \text{核电站，复制中心（苏）精炼厂（盟）}
+			\end{align*}
 			
-			兵营$\rightarrow$战车工厂，雷达，维修厂
-			
-			战车工厂$+$雷达$\rightarrow$实验室
-			
-			实验室$\rightarrow$核电站，复制中心（苏）精炼厂（盟）
 		\subsection{兵种和防御依赖}
-		\subsubsection{基础（兵营）}
-		\subsubsection{中级（雷达$+$战车工厂）}
-		\subsubsection{高级（作战实验室）}
+			\subsubsection{基础（兵营）}
+			\begin{table}[h]
+				\begin{center}
+					\begin{tabular}{l|l}
+						\toprule
+						\midrule
+						兵种 & 工兵，狗，工程师\\
+						防御 & 围墙，地堡，防空炮\\
+						\bottomrule
+					\end{tabular}
+					\label{tab:表1}
+					\caption{基础阶段的兵种和防御}
+				\end{center}
+			\end{table}
+			
+			\subsubsection{中级（雷达$+$战车工厂）}
+			\begin{table}[h]
+				\begin{center}
+					\label{tab:表2}
+					\caption{中级阶段的兵种和防御}
+				\end{center}
+			\end{table}
+			
+			\subsubsection{高级（作战实验室）}
 	\newpage
 	
 	\section{战术}
